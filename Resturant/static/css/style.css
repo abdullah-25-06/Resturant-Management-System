@@ -1,0 +1,106 @@
+@import url("https://fonts.googleapis.com/css2?family=Mulish&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  user-select: none;
+  font-family: Mulish;
+}
+nav {
+  background: transparent;
+}
+.carousel img {
+  height: 620px;
+}
+.menu {
+  height: 700px;
+  width: 100%;
+}
+.card {
+  width: 19%;
+  margin: 15px;
+}
+#pu {
+  height: 154px;
+}
+.card img {
+  height: 154px;
+}
+.card a {
+  margin-left: 75px;
+  height: 33px;
+  font-size: small;
+  width: 30%;
+}
+
+.card:hover{
+  box-shadow: 7px 5px 5px -3px rgba(92,92,92,0.4), 0px 5px 10px rgba(92,92,92,0.6), -7px 5px 5px -3px rgba(92,92,92,0.4);
+}
+.items {
+  display: flex;
+}
+.hr-lines{
+  position: relative;
+  color: #000000;
+  width: 500px;
+  margin: 100px auto;
+  text-align: center;
+  margin-top: 39px;
+  margin-bottom: 0px;
+  word-spacing: 2px;
+ 
+}
+
+
+
+.hr-lines:before{
+  content:" ";
+  height: 2px;
+  width: 160px;
+  background:rgb(53, 44, 44);
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 0;
+}
+
+.hr-lines:after{
+  content:" ";
+  height: 2px;
+  width: 160px;
+  background: rgb(53, 44, 44);
+  display: block;
+  position: absolute;
+  top: 50%;
+  right: 0;
+}
+
+.menu button {
+  background-color: white;
+  color: #000000;
+  border-color: black;
+  border-radius: 3px;
+  width: 86px;
+  height: 28px;
+  padding-bottom: 22px;
+  font-size: small;
+  align-items: center;
+  justify-content: center;
+  margin-left: 58px;
+}
+.menu button:hover {
+  background-color: #000000;
+  color: white;
+  border-color: black;
+  box-shadow: rgba(0, 0, 0, .2) 0 3px 5px -1px,rgba(0, 0, 0, .14) 0 6px 10px 0,rgba(0, 0, 0, .12) 0 1px 18px 0;
+}
+#active{
+  border-bottom: 1px solid black;
+}
+#navs a:hover{
+  font-weight: bold;
+  color: #000000;
+}
+nav{
+  background-color:rgba(230, 237, 240, 0.897);
+}

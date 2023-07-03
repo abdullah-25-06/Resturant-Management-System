@@ -1,0 +1,77 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static '/css/style-4.css' %}">
+    <title>Form</title>
+</head>
+
+<body class="body" style="background-image: url('/static/images/bggg.jpg');">
+    {{ request.user }}
+    {% if messages %}
+
+    {% for message in messages %}
+    <li>{{ message }}</li>
+    {% endfor %}
+    </ul>
+    {% endif %}
+    {% if pg_name == 'reg'%}
+    <div class="forms">
+        <h2 class="text-center">Registeration Form</h2>
+        <form action="" method="post">
+            {% csrf_token %}
+            <!-- Name -->
+            <div class="form1">
+                <p>Full Name:</p>
+                <input type="text" name="{{form.username.name}}" value="{{ form.username.value | default_if_none:'' }}">
+            </div>
+            <!-- Father Name -->
+            <div class="form2">
+                <p>Father Name:</p>
+                <input type="text" name="{{form.last_name.name}}"
+                    value="{{ form.last_name.value | default_if_none:'' }}">
+            </div>
+            <!-- pasword -->
+            <div class="form3">
+                <p>Password:</p>
+                <input type="password" name="{{form.password1.name}}"
+                    value="{{ form.password1.value | default_if_none:'' }}">
+            </div>
+            <div class="form4">
+                <p>Confirm Password:</p>
+                <input type="password" name="{{form.password2.name}}"
+                    value="{{ form.password2.value | default_if_none:'' }}">
+            </div>
+            <div class="butn">
+                <button>Register</button>
+            </div>
+        </form>
+    </div>
+    {% else %}
+    <div class="formss">
+        <h2 class="text-center">Login</h2>
+        <form action="{% url 'customer:login1' %}" method="post">
+            {% csrf_token %}
+            <!-- Name -->
+            <div class="form1a">
+                <p >Full Name:</p>
+                <input type="text" name='username'>
+            </div>
+            <!-- pasword -->
+            <div class="form2a">
+                <p>Password:</p>
+                <input type="password" name="password" id="">
+            </div>
+            <div class="butn2">
+            <button>Login</button>
+        </div>
+        </form>
+    </div>
+    {% endif %}
+</body>
+
+</html>
